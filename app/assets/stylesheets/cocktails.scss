@@ -1,0 +1,43 @@
+// Place all the styles related to the cocktails controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.image-card{
+  background-image: url("adam jaim.jpg");
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  box-shadow: 4px 2px #a9fffd;
+
+  }
+
+.container{
+  display: flex;
+}
+
+.show-cocktail{
+  margin: 100px;
+  h2{
+      color: #3e206d;
+    }
+}
+
+
+
+.cocktail-details{
+  background-color: #eab0d9;
+  color: #fa4252;
+
+}
+
+.new-coctail{
+
+   margin: 200px 200px;
+  p{
+    color: #e25822;
+  }
+}
+.back-image{
+  background-image: url("newpage.jpg");
+}

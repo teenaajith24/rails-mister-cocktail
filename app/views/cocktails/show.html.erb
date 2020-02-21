@@ -1,0 +1,46 @@
+<div class="show-cocktail">
+
+<h2> <%= @cocktail.name %> </h2>
+
+<table class="table table-responsive cocktail-details">
+  <th>
+  <td>Ingredient</td>
+  <td>|Dose</td>
+  </th>
+  <tbody>
+    <% @cocktail.doses.each do |dose| %>
+    <tr>
+      <td>
+        <%= dose.ingredient.name %>
+       </td>
+        <td>
+        <%= dose.description %>
+      </td>
+      <td>
+        <%= link_to "Delete",dose_path(dose), method: :delete, data: {confirm: "Are you sure?"}  %>
+
+       </td>
+
+      <% end %>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<div>
+<%= simple_form_for [@cocktail, @dose ] do |f| %>
+
+        <%= f.input :description, label: "Enter dose" %>
+        <%= f.association :ingredient %>
+
+        <%= f.submit "Add new dosage", class: 'btn btn-primary' %>
+      <% end %>
+
+</div>
+</div>
+
+
+
+
+

@@ -1,0 +1,23 @@
+
+
+
+
+
+<div class="new-coctail">
+
+<table>
+ <th> <p>Enter new cocktail details</p> </th>
+ <tbody>
+  <%=form_for @cocktail do |f| %>
+
+  <tr>  <td> <%= f.label :Name %> </td>
+    <td> <%= f.text_field :name %> </td>
+
+  </tr>
+
+  <tr> <td> <%=f.submit "Enter the details", class: 'btn btn-primary'  %></td>  </tr>
+
+<% end %>
+</tbody>
+</table>
+</div>
