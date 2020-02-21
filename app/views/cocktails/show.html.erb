@@ -34,10 +34,15 @@
         <%= f.input :description, label: "Enter dose" %>
         <%= f.association :ingredient %>
 
-        <%= f.submit "Add new dosage", class: 'btn btn-primary' %>
+        <%= f.submit "Add your own concoction", class: 'btn btn-primary' %>
+
       <% end %>
 
 </div>
+<br>
+<br>
+
+<%= link_to "Back to list ", cocktails_path, class: 'btn btn-primary' %>
 </div>
 
 

@@ -9,11 +9,19 @@
   height: 200px;
   margin: 10px;
   box-shadow: 4px 2px #a9fffd;
+  padding-left: 30px
 
   }
 
+.name-color{
+  color: white;
+}
+h2{
+    margin-left: 100px;
+  }
 .container{
   display: flex;
+
 }
 
 .show-cocktail{
@@ -23,6 +31,13 @@
     }
 }
 
+.button-right{
+  width: 200px;
+  height: 100px;
+  position: relative;
+
+
+}
 
 
 .cocktail-details{
