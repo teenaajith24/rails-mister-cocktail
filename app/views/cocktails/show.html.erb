@@ -1,7 +1,30 @@
-<div class="show-cocktail">
+<div class="banner">
+  <div class ="container">
+    <h2> <%= @cocktail.name %> </h2>
+    <p>Ingredients and quantity details are:<br>
+    <% @cocktail.doses.each do |dose| %>
+      <%= dose.ingredient.name %>
+      :
+      <span><%= dose.description %></span>
+      <%= link_to "Delete",dose_path(dose), method: :delete, data: {confirm: "Are you sure?"}, class: 'btn-ghost' %>
+    <br>
+    <% end %>
+    </p>
+  </div>
 
+</div>
+<div class ="container">
+<%= simple_form_for [@cocktail, @dose ] do |f| %>
+        <%= f.input :description, label: "Enter dose"%>
+        <%= f.association :ingredient %>
+        <%= f.submit "Add your own concoction", class: 'btn btn-primary' %>
+        <%= link_to "Back to list ", cocktails_path, class: 'btn btn-primary' %>
+
+<% end %>
+
+</div>
+<!--  <div class="show-cocktail">
 <h2> <%= @cocktail.name %> </h2>
-
 <table class="table table-responsive cocktail-details">
   <th>
   <td>Ingredient</td>
@@ -26,8 +49,6 @@
   </tbody>
 </table>
 
-
-
 <div>
 <%= simple_form_for [@cocktail, @dose ] do |f| %>
 
@@ -44,7 +65,7 @@
 
 <%= link_to "Back to list ", cocktails_path, class: 'btn btn-primary' %>
 </div>
-
+ -->
 
 
 

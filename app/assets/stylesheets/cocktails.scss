@@ -2,56 +2,122 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.image-card{
-  background-image: url("adam jaim.jpg");
+
+.card-category {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("newpage.jpg");
   background-size: cover;
-  width: 200px;
+  background-position: center;
   height: 200px;
-  margin: 10px;
-  box-shadow: 4px 2px #a9fffd;
-  padding-left: 30px
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #f64b3c;
+  transition: background 0.3s ease;
+    opacity: 0.7;
+}
 
+.cards {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+
+}
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
   }
+}
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
 
-.name-color{
+
+.cards > .card-category{
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("cocktails.jpg");
+  box-shadow: 2px 2px  #758184;
+}
+
+.link-color{
+color: white;
+}
+.new-coctail{
+  justify-content: center;
+}
+
+.btn-primary{
+  background:  #f64b3c;
+  opacity: 0.7;
+}
+.card-category table{
+  height: 600px;
+}
+
+.btn-flat:hover {
+  background: #f64b3c;
+ opacity: 1;
   color: white;
 }
-h2{
-    margin-left: 100px;
-  }
-.container{
-  display: flex;
-
+.btn-primary:hover{
+   background:  #f64b3c;
+opacity: 1;
+}
+.link-color:hover{
+  color: white;
 }
 
-.show-cocktail{
-  margin: 100px;
-  h2{
-      color: #3e206d;
-    }
+.banner {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("newpage.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+.banner h2 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
 }
 
-.button-right{
-  width: 200px;
-  height: 100px;
-  position: relative;
+.banner p {
+  font-size: 30px;
+  color: white;
 
-
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
+.btn-ghost {
+  color: black;
+  border: 2px solid #f64b3c;
+  padding: 4px 24px;
+  border-radius: 50px;
+  font-weight: bold;
 
-.cocktail-details{
-  background-color: #eab0d9;
-  color: #fa4252;
-
+  transition: opacity 0.3s ease;
 }
-
-.new-coctail{
-
-   margin: 200px 200px;
-  p{
-    color: #e25822;
-  }
-}
-.back-image{
-  background-image: url("newpage.jpg");
+.banner p .btn-ghost{
+  font-size: 20px;
 }
